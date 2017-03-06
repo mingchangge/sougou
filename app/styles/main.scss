@@ -101,14 +101,106 @@ body{
 .left{
   float: left;
 }
+.right{
+  float: right;
+}
 .left li,
 .right li{
   display: inline-block;
   padding: 5px;
   cursor: pointer;
+  position: relative;
 }
-.right{
-  float: right;
+.left li a:hover,
+.right li a:hover{
+  color: #ff5a34;
+}
+.now{
+  color: red;
+  font-weight: 800;
+}
+.arr{
+  position: absolute;
+  right: -7px;
+  top: 13px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 4px dashed transparent;
+  border-top: 4px solid #666;
+  border-right: 4px dashed transparent;
+  transition: all 0.25s;
+  vertical-align: top;
+}
+.left li:nth-last-child(1):hover .arr{
+  border-top: 4px solid #ff5a34;
+  transform: rotate(180deg);
+}
+.latest{
+  position: absolute;
+  left: 32px;
+  top: -3px;
+  background: url(../images/ico_new.png) 0 0 no-repeat;
+  width: 13px;
+  height: 15px;
+  border: 0 !important;
+}
+.moreList{
+  position: absolute;
+  left: -18px;
+  top: 40px;
+  background: #FFF;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  opacity: 0;
+  visibility: hidden;
+}
+.left li:nth-last-child(1):hover .moreList{
+  top: 30px;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.2s top;
+}
+.moreList li{
+  display: block;
+  width: 60px;
+  text-align: center;
+}
+.moreList li:hover{
+  background: #ff5a34;
+  color: #FFF;
+}
+.ico{
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  top: -5px;
+  left: 26px;
+  background: url(../images/ico_spy.png) 0 -295px no-repeat;
+}
+.right li:nth-child(1) a{
+  padding-right: 20px;
+  border-right: 1px solid #f2f2f2;
+}
+.right .login{
+  padding: 0 10px;
+  border-radius: 2px;
+  color: #fff;
+  line-height: 24px;
+  background: #ff5a42;
+  font-size: 12px;
+}
+.right .login:hover{
+  box-shadow: 0 2px 4px rgba(255,90,66,0.5);
+}
+.right .login:hover a{
+  color: #fff;
+}
+.right li:nth-last-child(2):hover .moreList{
+  top: 30px;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.2s top;
 }
 header:after{
   content: '';
@@ -141,14 +233,14 @@ header:after{
 .search a{
   display: inline-block;
   width: 74px;
-  height: 44px;
+  height: 46px;
   box-shadow: none;
   font-size: 33px;
   border-top-left-radius: 0;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 0;
-  line-height: 44px;
+  line-height: 46px;
   text-align: center;
   background: #fd6853 url('../images/ico_spy.png') 29px -9px no-repeat;
   vertical-align: bottom;
