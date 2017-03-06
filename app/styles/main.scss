@@ -1,7 +1,7 @@
 //$icon-font-path: '../fonts/';
 //// bower:scss
 //@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-//// endbower
+// endbower
 //
 //.browserupgrade {
 //  margin: 0.2em 0;
@@ -129,11 +129,19 @@ header:after{
   height: 44px;
   outline: 0;
   padding-left: 10px;
+  font-size: 16px;
+  border: 1px solid rgba(0,0,0,0.25);
+  color: #333;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-right: 0;
 }
 .search a{
   display: inline-block;
   width: 74px;
-  height: 48px;
+  height: 44px;
   box-shadow: none;
   font-size: 33px;
   border-top-left-radius: 0;
@@ -146,13 +154,6 @@ header:after{
   vertical-align: bottom;
   cursor: pointer;
 }
-.APP:before{
-  content: '';
-  display: block;
-  width: 62px;
-  height: 62px;
-  background: url("../images/erweima2.png");
-}
 footer{
   margin-top: 100px;
 }
@@ -162,10 +163,46 @@ footer:after{
   clear: both;
 }
 .wrap{
-  text-align: center;
+  display: flex;
 }
 .wrap:after{
   content: '';
   display: block;
   clear: both;
 }
+.APP{
+  flex: 1;
+  text-align: right;
+  border-right: 1px solid #f2f2f2;
+  padding: 10px;
+}
+.APP:before{
+  content: '';
+  display: inline-block;
+  width: 62px;
+  height: 62px;
+  background:  url('../images/erweima.png');
+}
+.APP h1{
+  display: inline-block;
+  font-size: 12px;
+  color: rgba(0,0,0,0.7);
+  font-weight: 700;
+  vertical-align: top;
+  margin-left: 10px;
+}
+.APP p{
+  text-align: center;
+  font-size: 12px;
+  color: rgba(0,0,0,0.5);
+  font-weight: 400;
+  vertical-align: middle;
+  padding-top: 5px;
+}
+.info{
+  flex: 1;
+  padding: 30px 10px;
+  color: rgba(0,0,0,0.7);
+}
+
+
